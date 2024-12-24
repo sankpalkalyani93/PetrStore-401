@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content%}
+<table class="table table-bordered table-striped">
+    <tr>
+    <thead>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Age</th>
+        <th>Price</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    </tr>
+    <tbody> 
+    {% for pet in pets %}
+      
+            <tr>
+            <td><a href="{% url 'pet_detail_view' pet.id %}"> {{ pet.name }} </a></td> 
+            <td>{{ pet.breed }}</td> 
+            <td> {{ pet.age }} </td> 
+            <td> {{ pet.price }} </td>
+            <td> {{ pet.type }} </td> 
+            <td> {{ pet.description }} </td>
+            </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}

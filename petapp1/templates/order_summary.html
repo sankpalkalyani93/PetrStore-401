@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in order.orderitem_set.all %}
+            <tr>
+                <td>
+                    {% if item.pet_id %}
+                    {{ item.pet_id.name }}
+                    {% elif item.product_id %}
+                    {{ item.product_id.product_name}}
+                    {% endif %}
+                   
+                </td>
+                <td>
+                    {% if item.pet_id %}
+                    Pet
+                    {% elif item.product_id %}
+                    Product
+                    {% endif %}
+                   
+                </td>
+                <td>
+                    {{ item.quantity }}
+                </td>
+                <td>
+                    {{ item.price }}
+                </td>   
+            </tr>
+            {% endfor %}
+
+        </tbody>
+        <a href="{% url 'proceed_to_payment' order.id %}" class="btn btn-success">Proceed to Payment</a>
+
+    </table>
+{% endblock %}

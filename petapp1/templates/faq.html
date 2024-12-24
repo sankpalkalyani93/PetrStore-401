@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2 class="text-center">Frequently Asked Questions (FAQ)</h2>
+        
+        <div class="faq-item">
+            <h5>1. What types of pets do you sell?</h5>
+            <p>We specialize in selling a variety of pets, including dogs, cats, birds, fish, and small mammals. Our inventory includes many popular breeds, and we’re always happy to help you find the perfect pet for your home.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h5>2. How do I know if a pet is right for me?</h5>
+            <p>Choosing a pet is an important decision! We recommend considering factors like the pet’s size, temperament, exercise needs, and grooming requirements. If you're unsure, our team is here to help you with advice and recommendations.</p>
+        </div>
+
+        <div class="faq-item">
+            <h5>3. Do you offer any guarantees on pets purchased?</h5>
+            <p>Yes, we offer a 30-day health guarantee for pets purchased at our store. If your pet falls ill within this period, please contact us, and we’ll assist you with veterinary care or a return as per our policy.</p>
+        </div>
+
+        <div class="faq-item">
+            <h5>4. Can I return a pet if I change my mind?</h5>
+            <p>We understand that sometimes things don’t work out. Our return policy allows for a pet return within 14 days, provided the pet is healthy and the return is in line with our terms. Please refer to our Return Policy for full details.</p>
+        </div>
+
+        <div class="faq-item">
+            <h5>5. How do I care for my new pet?</h5>
+            <p>Proper care varies by species and breed. We offer detailed care guides for each pet type, including feeding schedules, exercise needs, and grooming tips. You can also ask our staff for personalized care advice.</p>
+        </div>
+
+        <div class="faq-item">
+            <h5>6. Can I adopt a pet from your store?</h5>
+            <p>We do not offer pet adoptions directly; however, we work with several local animal shelters and rescue organizations. We are happy to connect you with adoption opportunities and assist with the process.</p>
+        </div>
+
+        <div class="faq-item">
+            <h5>7. Do you offer pet supplies?</h5>
+            <p>Yes, we carry a wide range of pet supplies including food, toys, grooming products, and accessories for all types of pets. You can browse our selection online or visit our store for more information.</p>
+        </div>
+
+        <div class="faq-item">
+            <h5>8. What should I do if I need help choosing a pet?</h5>
+            <p>If you’re unsure which pet would best suit your lifestyle, don’t hesitate to contact us. Our knowledgeable staff can guide you through the selection process and offer advice based on your needs.</p>
+        </div>
+
+        <div class="faq-item">
+            <h5>9. How can I contact you if I have more questions?</h5>
+            <p>You can reach us via email at <a href="mailto:contact@petstore.com">contact@petstore.com</a>, or you can call us at [Phone Number]. We’re happy to assist you with any questions you may have!</p>
+        </div>
+
+        <p class="text-center mt-5">If you have any other questions, feel free to <a href="{% url 'contact' %}">contact us</a>.</p>
+    </div>
+{% endblock %}

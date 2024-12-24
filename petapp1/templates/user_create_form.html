@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content%}
+        <form method="post">
+            {% csrf_token %}
+
+                <div class="form-group">
+                    {{ pet_user_form.username.label_tag }} {{ pet_user_form.username }}
+                </div>
+                <div class="form-group">
+                    {{ pet_user_form.fname.label_tag }} {{ pet_user_form.fname }}
+                </div>
+                <div class="form-group">
+                    {{ pet_user_form.lname.label_tag }} {{ pet_user_form.lname }}
+                </div>
+                <div class="form-group">
+                    {{ pet_user_form.email1.label_tag }} {{ pet_user_form.email1 }}
+                </div>
+                <div class="form-group">
+                    {{ pet_user_form.phone1.label_tag }} {{ pet_user_form.phone1 }}
+                </div>
+                <div class="form-group">
+                    {{ pet_user_form.address1.label_tag }} {{ pet_user_form.address1 }}
+                </div>
+                <div class="form-group">
+                    {{ pet_user_form.password1.label_tag }} {{ pet_user_form.password1 }}
+                </div>
+                <div class="form-group">
+                    {{ pet_user_form.password2.label_tag }} {{ pet_user_form.password2 }}
+                </div>
+                <button type="submit" class="btn btn-primary m-2">Add Pet User</button>
+        </form>
+{% endblock %}
